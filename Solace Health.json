@@ -1,0 +1,679 @@
+{
+  "applicationDomains": [
+    {
+      "createdTime": 1629894552963,
+      "updatedTime": 1629894552963,
+      "createdBy": "1nkhwqqewyer",
+      "changedBy": "1nkhwqqewyer",
+      "id": "s3go4wbe5fw",
+      "name": "Solace Health",
+      "topicDomain": "",
+      "description": "Solace Personal Health Demo Domain",
+      "enforceUniqueTopicNames": true,
+      "schemas": [
+        {
+          "createdTime": 1631415668171,
+          "updatedTime": 1631415668171,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "53h8hu0l1xg",
+          "name": "ChatMessageSchema",
+          "shared": true,
+          "description": "Chat Message Schema",
+          "contentType": "JSON",
+          "content": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 1,
+          "versions": [
+            {
+              "createdTime": 1631415668171,
+              "updatedTime": 1631415668171,
+              "createdBy": "1nkhwqqewyer",
+              "changedBy": "1nkhwqqewyer",
+              "id": "xis0ifdg63x",
+              "schemaId": "53h8hu0l1xg",
+              "name": "1",
+              "versionNumber": "1",
+              "content": "{\n  \"$id\": \"https://example.com/arrays.schema.json\",\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"description\": \"A chat message between doctor and patient mobile app\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"messageId\": {\n      \"type\": \"string\",\n      \"description\": \"Message reference id\"\n    },\n    \"dateTime\": {\n      \"type\": \"string\",\n      \"description\": \"Data timestamp sending\"\n    },\n    \"senderId\": {\n      \"type\": \"string\",\n      \"description\": \"Id of the sender\"\n    },\n    \"receiverId\": {\n      \"type\": \"string\",\n      \"description\": \"Id of the receiver\"\n    },\n    \"chatMessage\": {\n      \"type\": \"string\",\n      \"description\": \"the chat message content\"\n    }\n  }\n}",
+              "schemaRegistryId": "",
+              "revisionNumber": 1,
+              "type": "schemaVersion"
+            }
+          ],
+          "type": "schema"
+        },
+        {
+          "createdTime": 1631415706363,
+          "updatedTime": 1631415706363,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "ctj1ow2vl8o",
+          "name": "PatientAlertSchema",
+          "shared": true,
+          "description": "Patient Alert Schema",
+          "contentType": "JSON",
+          "content": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 1,
+          "versions": [
+            {
+              "createdTime": 1631415706363,
+              "updatedTime": 1631415706363,
+              "createdBy": "1nkhwqqewyer",
+              "changedBy": "1nkhwqqewyer",
+              "id": "rl1fem0ll00",
+              "schemaId": "ctj1ow2vl8o",
+              "name": "1",
+              "versionNumber": "1",
+              "content": "{\n  \"$id\": \"https://example.com/arrays.schema.json\",\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"description\": \"An alert of a patient condition\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"messageId\": {\n      \"type\": \"string\",\n      \"description\": \"Message reference id\"\n    },\n    \"dateTime\": {\n      \"type\": \"string\",\n      \"description\": \"Data timestamp sending\"\n    },\n    \"patientId\": {\n      \"type\": \"string\",\n      \"description\": \"Id of the patient\"\n    },\n    \"alertMessage\": {\n      \"type\": \"string\",\n      \"description\": \"The details of the emergency of the patient\"\n    }\n  }\n}",
+              "schemaRegistryId": "",
+              "revisionNumber": 1,
+              "type": "schemaVersion"
+            }
+          ],
+          "type": "schema"
+        },
+        {
+          "createdTime": 1631415773655,
+          "updatedTime": 1631415773655,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "hmnt7ftby9g",
+          "name": "PatientHeartRateSchema",
+          "shared": true,
+          "description": "Patient Heart Rate Schema",
+          "contentType": "JSON",
+          "content": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 1,
+          "versions": [
+            {
+              "createdTime": 1631415773655,
+              "updatedTime": 1631415773655,
+              "createdBy": "1nkhwqqewyer",
+              "changedBy": "1nkhwqqewyer",
+              "id": "kuf2vhlf70m",
+              "schemaId": "hmnt7ftby9g",
+              "name": "1",
+              "versionNumber": "1",
+              "content": "{\n  \"$id\": \"https://example.com/arrays.schema.json\",\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"description\": \"A representation of a patient data heart rate data message\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"messageId\": {\n      \"type\": \"string\",\n      \"description\": \"Message reference id\"\n    },\n    \"dateTime\": {\n      \"type\": \"string\",\n      \"description\": \"Data timestamp sending\"\n    },\n    \"patientId\": {\n      \"type\": \"string\",\n      \"description\": \"Id of the patient\"\n    },\n    \"heartRatePerMinute\": {\n      \"type\": \"integer\",\n      \"minimum\": 0,\n      \"maximum\": 250,\n      \"description\": \"Current heart rate beats per minute of the patient\"\n    }\n  }\n}",
+              "schemaRegistryId": "",
+              "revisionNumber": 1,
+              "type": "schemaVersion"
+            }
+          ],
+          "type": "schema"
+        },
+        {
+          "createdTime": 1631415740439,
+          "updatedTime": 1631415740439,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "s79eympbxnz",
+          "name": "PatientBloodPressureSchema",
+          "shared": true,
+          "description": "Patient Blood Pressure Schema",
+          "contentType": "JSON",
+          "content": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 1,
+          "versions": [
+            {
+              "createdTime": 1631415740439,
+              "updatedTime": 1631415740439,
+              "createdBy": "1nkhwqqewyer",
+              "changedBy": "1nkhwqqewyer",
+              "id": "fqpr6iqqeku",
+              "schemaId": "s79eympbxnz",
+              "name": "1",
+              "versionNumber": "1",
+              "content": "{\n  \"$id\": \"https://example.com/arrays.schema.json\",\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"description\": \"A representation of a patient blood pressure message\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"messageId\": {\n      \"type\": \"string\",\n      \"description\": \"Message reference id\"\n    },\n    \"dateTime\": {\n      \"type\": \"string\",\n      \"description\": \"Sending date and time\"\n    },\n    \"patientId\": {\n      \"type\": \"string\",\n      \"description\": \"Id of the patient\"\n    },\n    \"bloodPressure\": {\n      \"type\": \"integer\",\n      \"minimum\": 0,\n      \"maximum\": 200,\n      \"description\": \"Current blood pressure of the patient\"\n    }\n  }\n}",
+              "schemaRegistryId": "",
+              "revisionNumber": 1,
+              "type": "schemaVersion"
+            }
+          ],
+          "type": "schema"
+        }
+      ],
+      "events": [
+        {
+          "createdTime": 1629894820791,
+          "updatedTime": 1635414152971,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "0joo11au5gq",
+          "name": "PatientRawBPEvent",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "Patient Raw Blood Pressure Event",
+          "schemaId": "s79eympbxnz",
+          "schemaVersionId": "fqpr6iqqeku",
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 3,
+          "keyPrimitivePayloadType": "STRING",
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "97rqzgdj500",
+            "virtualBrokerId": "xq9f43idpc6",
+            "topicAddressLevels": [
+              {
+                "id": "3uxzsxddhm2",
+                "consumable": false,
+                "name": "patient",
+                "displayName": "patient",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "4zj8byaiog7",
+                "consumable": false,
+                "name": "patientID",
+                "displayName": "patientID",
+                "enumId": "f7gqe7s0ykd",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              },
+              {
+                "id": "22dah50v4ub",
+                "consumable": false,
+                "name": "data",
+                "displayName": "data",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "l3i62defzo7",
+                "consumable": false,
+                "name": "raw",
+                "displayName": "raw",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "jusc3ga47dh",
+                "consumable": true,
+                "name": "bp",
+                "displayName": "bp",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1635414371955,
+          "updatedTime": 1635414371955,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "sg0v9j05sep",
+          "name": "PatientCalcBPEvent",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "Patient Calculated Blood Pressure Event",
+          "schemaId": "s79eympbxnz",
+          "schemaVersionId": "fqpr6iqqeku",
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 1,
+          "keyPrimitivePayloadType": "STRING",
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "kx6aprh2wz5",
+            "virtualBrokerId": "xq9f43idpc6",
+            "topicAddressLevels": [
+              {
+                "id": "3uxzsxddhm2",
+                "consumable": false,
+                "name": "patient",
+                "displayName": "patient",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "4zj8byaiog7",
+                "consumable": false,
+                "name": "patientID",
+                "displayName": "patientID",
+                "enumId": "f7gqe7s0ykd",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              },
+              {
+                "id": "22dah50v4ub",
+                "consumable": false,
+                "name": "data",
+                "displayName": "data",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "p4wfi3ukd7m",
+                "consumable": false,
+                "name": "calculated",
+                "displayName": "calculated",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "pyefratxzur",
+                "consumable": true,
+                "name": "bp",
+                "displayName": "bp",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1635414305805,
+          "updatedTime": 1635414305805,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "cg2gl7a50fr",
+          "name": "PatientCalcHREvent",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "Patient calculated heart rate event",
+          "schemaId": "hmnt7ftby9g",
+          "schemaVersionId": "kuf2vhlf70m",
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 1,
+          "keyPrimitivePayloadType": "STRING",
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "xa8qvcqiama",
+            "virtualBrokerId": "xq9f43idpc6",
+            "topicAddressLevels": [
+              {
+                "id": "3uxzsxddhm2",
+                "consumable": false,
+                "name": "patient",
+                "displayName": "patient",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "4zj8byaiog7",
+                "consumable": false,
+                "name": "patientID",
+                "displayName": "patientID",
+                "enumId": "f7gqe7s0ykd",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              },
+              {
+                "id": "22dah50v4ub",
+                "consumable": false,
+                "name": "data",
+                "displayName": "data",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "p4wfi3ukd7m",
+                "consumable": false,
+                "name": "calculated",
+                "displayName": "calculated",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "3g9sjsqj86e",
+                "consumable": true,
+                "name": "hr",
+                "displayName": "hr",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1629894811505,
+          "updatedTime": 1635414125273,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "0kqr8r6l9bh",
+          "name": "PatientRawHREvent",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "Patient Raw Heart Rate Event",
+          "schemaId": "hmnt7ftby9g",
+          "schemaVersionId": "kuf2vhlf70m",
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 3,
+          "keyPrimitivePayloadType": "STRING",
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "dc44jnms351",
+            "virtualBrokerId": "xq9f43idpc6",
+            "topicAddressLevels": [
+              {
+                "id": "3uxzsxddhm2",
+                "consumable": false,
+                "name": "patient",
+                "displayName": "patient",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "4zj8byaiog7",
+                "consumable": false,
+                "name": "patientID",
+                "displayName": "patientID",
+                "enumId": "f7gqe7s0ykd",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              },
+              {
+                "id": "22dah50v4ub",
+                "consumable": false,
+                "name": "data",
+                "displayName": "data",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "l3i62defzo7",
+                "consumable": false,
+                "name": "raw",
+                "displayName": "raw",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "u1jg5w171j0",
+                "consumable": true,
+                "name": "hr",
+                "displayName": "hr",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1629894719186,
+          "updatedTime": 1635413986083,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "ycrmvvpse34",
+          "name": "PatientAlertEvent",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "Patient alerts event",
+          "schemaId": "ctj1ow2vl8o",
+          "schemaVersionId": "rl1fem0ll00",
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 4,
+          "keyPrimitivePayloadType": "STRING",
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "ynr4rg2e315",
+            "virtualBrokerId": "xq9f43idpc6",
+            "topicAddressLevels": [
+              {
+                "id": "5o1rcpd9250",
+                "consumable": false,
+                "name": "alert",
+                "displayName": "alert",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "3cancxs7pfp",
+                "consumable": false,
+                "name": "patient",
+                "displayName": "patient",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "0d2tmqrl78w",
+                "consumable": true,
+                "name": "patientID",
+                "displayName": "patientID",
+                "enumId": "f7gqe7s0ykd",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1629894781369,
+          "updatedTime": 1635413916893,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "6zunvsx4ux1",
+          "name": "ChatEvent",
+          "version": "0.0.1",
+          "shared": false,
+          "description": null,
+          "schemaId": "53h8hu0l1xg",
+          "schemaVersionId": "xis0ifdg63x",
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "s3go4wbe5fw",
+          "revisionNumber": 3,
+          "keyPrimitivePayloadType": "STRING",
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "0nr2xka9hsv",
+            "virtualBrokerId": "xq9f43idpc6",
+            "topicAddressLevels": [
+              {
+                "id": "44mhsala62o",
+                "consumable": false,
+                "name": "chat",
+                "displayName": "chat",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "xumbyh33rwj",
+                "consumable": true,
+                "name": "inboxID",
+                "displayName": "inboxID",
+                "enumId": "c5v0duz1fln",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        }
+      ],
+      "applications": [
+        {
+          "createdTime": 1629894596655,
+          "updatedTime": 1631415386357,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "zhkv3kjg0vf",
+          "name": "DoctorMobileApp",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "s3go4wbe5fw",
+          "producedEventIds": [
+            "6zunvsx4ux1"
+          ],
+          "consumedEventIds": [
+            "6zunvsx4ux1",
+            "ycrmvvpse34"
+          ],
+          "revisionNumber": 5,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        },
+        {
+          "createdTime": 1629894588803,
+          "updatedTime": 1631415397996,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "am6083qt7uw",
+          "name": "PatientMobileApp",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "s3go4wbe5fw",
+          "producedEventIds": [
+            "0joo11au5gq",
+            "0kqr8r6l9bh",
+            "6zunvsx4ux1"
+          ],
+          "consumedEventIds": [
+            "6zunvsx4ux1"
+          ],
+          "revisionNumber": 6,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        },
+        {
+          "createdTime": 1629894606606,
+          "updatedTime": 1635414400447,
+          "createdBy": "1nkhwqqewyer",
+          "changedBy": "1nkhwqqewyer",
+          "id": "l1h4h7ik06m",
+          "name": "PatientDataProcessor",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "s3go4wbe5fw",
+          "producedEventIds": [
+            "cg2gl7a50fr",
+            "sg0v9j05sep",
+            "ycrmvvpse34"
+          ],
+          "consumedEventIds": [
+            "0joo11au5gq",
+            "0kqr8r6l9bh"
+          ],
+          "revisionNumber": 7,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        }
+      ],
+      "type": "applicationDomain"
+    }
+  ],
+  "virtualBrokers": [
+    {
+      "createdTime": 1633357945981,
+      "updatedTime": 1633357945981,
+      "createdBy": "1nkhwqqewyer",
+      "changedBy": "1nkhwqqewyer",
+      "id": "xq9f43idpc6",
+      "name": "KafkaMesh",
+      "description": "",
+      "brokerType": "kafka",
+      "levelDelimiter": ".",
+      "topicNodes": [],
+      "type": "virtualBroker"
+    }
+  ],
+  "topicValueSets": [
+    {
+      "createdTime": 1635413979439,
+      "updatedTime": 1635413979439,
+      "createdBy": "1nkhwqqewyer",
+      "changedBy": "1nkhwqqewyer",
+      "id": "f7gqe7s0ykd",
+      "description": "",
+      "name": "patientID",
+      "values": [
+        {
+          "displayName": "",
+          "value": "12345",
+          "type": "enumItem"
+        }
+      ],
+      "type": "enum"
+    },
+    {
+      "createdTime": 1635413904604,
+      "updatedTime": 1635413904604,
+      "createdBy": "1nkhwqqewyer",
+      "changedBy": "1nkhwqqewyer",
+      "id": "c5v0duz1fln",
+      "description": "",
+      "name": "inboxID",
+      "values": [
+        {
+          "displayName": "",
+          "value": "12345",
+          "type": "enumItem"
+        },
+        {
+          "displayName": "",
+          "value": "54321",
+          "type": "enumItem"
+        }
+      ],
+      "type": "enum"
+    }
+  ],
+  "formatVersion": "1",
+  "type": "ApplicationDomainExport"
+}
