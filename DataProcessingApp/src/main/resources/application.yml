@@ -1,0 +1,39 @@
+spring:
+  cloud:
+    function:
+      definition: alertPatientSupplier;patientDataRawHrFunction;patientDataRawBpFunction
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
+        bindings:
+          patientDataRawHrFunction-in-0:
+            consumer:
+              destination-is-pattern: true
+          patientDataRawBpFunction-in-0:
+            consumer:
+              destination-is-pattern: true
+      bindings:
+        alertPatientSupplier-out-0:
+          # cheating for now ;) not getting dynamically the patient id / topic
+          destination: alert.patient.12345
+        patientDataRawHrFunction-in-0:
+          destination: patient.*.data.raw.hr
+          group: patientDataHRGroup
+        patientDataRawHrFunction-out-0:
+          # cheating for now ;) not getting dynamically the patient id / topic
+          destination: patient.12345.data.calculated.hr
+        patientDataRawBpFunction-in-0:
+          destination: patient.*.data.raw.bp
+          group: patientDataBPGroup
+        patientDataRawBpFunction-out-0:
+          # cheating for now ;) not getting dynamically the patient id / topic
+          destination: patient.12345.data.calculated.bp
+      poller:
+        fixed-delay: 15000
+logging:
+  level:
+    root: info
+    org:
+      springframework: info

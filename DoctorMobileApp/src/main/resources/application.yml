@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    function:
+      definition: chatMsgSupplier;chatMsgConsumer;alertPatientConsumer
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
+      bindings:
+        chatMsgSupplier-out-0:
+          destination: chat.54321
+        chatMsgConsumer-in-0:
+          destination: chat.12345
+        alertPatientConsumer-in-0:
+          destination: alert.patient.12345
+      poller:
+        fixed-delay: 5000
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+

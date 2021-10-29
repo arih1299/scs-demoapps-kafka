@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    function:
+      definition: chatMsgSupplier;chatMsgConsumer;patientDataRawHrSupplier;patientDataRawBpSupplier
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
+      bindings:
+        chatMsgSupplier-out-0:
+          destination: chat.12345
+        chatMsgConsumer-in-0:
+          destination: chat.54321
+        patientDataRawHrSupplier-out-0:
+          destination: patient.12345.data.raw.hr
+        patientDataRawBpSupplier-out-0:
+          destination: patient.12345.data.raw.bp
+      poller:
+        fixed-delay: 5000
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+
